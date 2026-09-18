@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusLens — проверенные фото университетов</title>
+  <meta name="description" content="Введите название университета и за полминуты получите фото кампуса, аудиторий, общежитий, библиотеки и города с источниками и показателем достоверности.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar-top">
+      <div class="bar-inner">
+        <a class="brand" href="/">
+
+          <span class="brand-name">CampusLens</span>
+        </a>
+        <nav class="bar-top-nav" aria-label="Дополнительно">
+          <a href="#hero-panel">О проекте</a>
+          <a href="#how">Как это работает</a>
+        </nav>
+        <a class="btn-pill bar-cta" href="#search-form">Собрать профиль</a>
+      </div>
+    </div>
+    <div class="bar-nav">
+      <div class="bar-inner">
+        <nav class="bar-nav-menu" aria-label="Разделы">
+          <a href="#result">Категории
+            <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#how">Как проверяем
+            <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </nav>
+        <a class="icon-search-btn" href="#search-form" aria-label="Перейти к поиску">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13.2 13.2 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="hero-panel">
+    <div class="hero-inner">
+      <div class="hero-panel">
+        <div class="hero-accent-text">
+          <h1>Профиль вуза за 30 секунд</h1>
+          <p>Настоящие фото кампуса, аудиторий, общежитий и города — с источником, лицензией и статусом проверки у каждого снимка. Без рекламы и чужих кампусов.</p>
+          <a class="btn-pill" href="#how">Как это работает</a>
+        </div>
+      </div>
+      <div class="hero-photo" aria-hidden="true">
+        <img src="/static/YALE.Campus.exam.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="search-float">
+      <section class="search" aria-label="Поиск университета">
+        <form id="search-form" autocomplete="off">
+          <label for="q" class="search-label sr-only">Название университета</label>
+          <div class="search-row">
+            <div class="field-wrap">
+              <svg class="field-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13.2 13.2 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <input id="q" name="q" type="search" required minlength="2" maxlength="120"
+                     placeholder="Введите название вуза" aria-autocomplete="list"
+                     aria-controls="suggest" aria-expanded="false">
+              <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+            </div>
+            <button id="go" type="submit">Собрать профиль</button>
+          </div>
+        </form>
+        <p class="examples">Попробуйте:
+          <button class="chip" data-q="Nazarbayev University">Nazarbayev University</button>
+          <button class="chip" data-q="ETH Zurich">ETH Zurich</button>
+          <button class="chip" data-q="Томский государственный университет">ТГУ</button>
+          <button class="chip" data-q="University of Tokyo">University of Tokyo</button>
+        </p>
+      </section>
+    </div>
+  </section>
+
+  <section class="how-section" id="how" aria-label="Как проверяем">
+    <div class="how-inner">
+      <div class="how-head">
+        <h2>Как мы проверяем фото</h2>
+        <p>От названия вуза до подтверждённого профиля — без ручного подбора снимков, каждый шаг объясним.</p>
+      </div>
+      <div class="how-grid">
+        <article class="how-card how-card--lg">
+          <span class="how-num">01</span>
+          <h3>Поиск вуза</h3>
+          <p>Вуз ищется в Wikidata с учётом опечаток — через поиск Википедии — и неоднозначностей: если найдено похожее, сервис спрашивает «Не тот вуз?».</p>
+        </article>
+        <article class="how-card how-card--lg">
+          <span class="how-num">02</span>
+          <h3>Сбор кандидатов</h3>
+          <p>Параллельно опрашиваются Wikidata, категория и подкатегории вуза на Wikimedia Commons, геопоиск Commons по координатам кампуса, официальный сайт вуза и центр города.</p>
+        </article>
+        <article class="how-card how-card--wide">
+          <span class="how-num">03</span>
+          <h3>Фильтры</h3>
+          <p>Отсеиваются логотипы, карты, документы, портреты, маленькие файлы и файлы без свободной лицензии — в профиль попадают только настоящие фото места.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-num">04</span>
+          <h3>Показатель достоверности</h3>
+          <p>Складывается из объяснимых сигналов: происхождение файла, геометка, упоминание вуза в названии и категориях, лицензия, свежесть снимка и, по желанию, AI-анализ содержимого.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-num">05</span>
+          <h3>Дедупликация</h3>
+          <p>Точные копии убираются по SHA-1, визуально похожие кадры — по перцептивному хешу dHash.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-num">06</span>
+          <h3>Категории</h3>
+          <p>Фото раскладываются по шести категориям: кампус, учебные пространства, общежития, библиотека, студенческая жизнь, город.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-num">07</span>
+          <h3>Профиль</h3>
+          <p>«Проверено» и «Вероятно» видны сразу, «Не подтверждено» скрыто по умолчанию — но его можно показать одним переключателем.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="progress" class="progress" hidden aria-live="polite">
+      <div class="progress-head">
+        <span id="progress-title">Собираем профиль</span>
+        <span id="timer" class="timer">0,0 с</span>
+      </div>
+      <ol class="stages">
+        <li data-stage="resolve"><span class="st-name">Находим вуз</span><span class="st-detail"></span></li>
+        <li data-stage="search"><span class="st-name">Ищем фото в источниках</span><span class="st-detail"></span></li>
+        <li data-stage="verify"><span class="st-name">Проверяем принадлежность</span><span class="st-detail"></span></li>
+        <li data-stage="dedup"><span class="st-name">Убираем дубликаты</span><span class="st-detail"></span></li>
+        <li data-stage="categorize"><span class="st-name">Распределяем по категориям</span><span class="st-detail"></span></li>
+      </ol>
+    </section>
+
+    <section id="error" class="error" hidden role="alert"></section>
+
+    <section id="result" class="result" hidden>
+      <div class="uni">
+        <div class="uni-main">
+          <h1 id="uni-name"></h1>
+          <p id="uni-desc" class="uni-desc"></p>
+          <p id="uni-facts" class="uni-facts"></p>
+          <p id="uni-links" class="uni-links"></p>
+        </div>
+        <dl id="stats" class="stats"></dl>
+      </div>
+
+      <div id="alternatives" class="alternatives" hidden></div>
+      <div id="warnings" class="warnings" hidden></div>
+
+      <div class="toolbar">
+        <div id="tabs" class="tabs" role="tablist" aria-label="Категории"></div>
+        <label class="toggle">
+          <input id="show-hidden" type="checkbox">
+          <span>Показать непроверенные <span id="hidden-count"></span></span>
+        </label>
+      </div>
+
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden></p>
+
+      <details class="sources-box">
+        <summary>Как собран этот профиль</summary>
+        <div id="sources-detail"></div>
+      </details>
+    </section>
+  </main>
+
+  <dialog id="viewer" class="viewer" aria-labelledby="v-title">
+    <form method="dialog"><button class="close" aria-label="Закрыть">✕</button></form>
+    <div class="viewer-body">
+      <img id="v-img" alt="">
+      <div class="viewer-info">
+        <div id="v-stamp"></div>
+        <h2 id="v-title"></h2>
+        <p id="v-cat" class="v-cat"></p>
+        <h3>Почему такой показатель</h3>
+        <ul id="v-reasons" class="reasons"></ul>
+        <p id="v-meta" class="v-meta"></p>
+        <p id="v-links" class="v-links"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="foot">
+    <p>Фото берутся автоматически из Wikidata и Wikimedia Commons (открытые лицензии, авторы указаны) и с официального сайта вуза (только превью со ссылкой). Работает для университетов, у которых есть запись в Wikidata; для вузов без фото на Commons профиль будет неполным — сервис так и напишет.</p>
+    <p id="ai-status"></p>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

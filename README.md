@@ -5,7 +5,7 @@ AI-сервис, который по названию университета �
 Кейс LOCUS №1 (код участия LOCUSCASE1).
 
 - **Сайт:** https://campuslens-qzce.onrender.com (вход не требуется)
-- **Демо-видео:** https://ВСТАВЬТЕ-ССЫЛКУ
+- **Демо-видео:** https://drive.google.com/file/d/1VxuBo8teWyWQBAuKtIVj3tTGXOtq79NO/view?usp=sharing
 - **Презентация:** https://canva.link/z7z929qk3kpkgke
 - **Техническая справка:** [TECHNICAL.md](TECHNICAL.md)
 

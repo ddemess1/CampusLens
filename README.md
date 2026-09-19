@@ -101,9 +101,11 @@ docker run -p 7860:7860 -e GEMINI_API_KEY=... campuslens
 ## Роли команды
 | Участник | Роль |
 |---|---|
-| ИМЯ | Капитан, backend, пайплайн проверки |
-| ИМЯ | Frontend, дизайн |
-| ИМЯ | Тестирование на разных вузах, README, презентация, видео |
+| Aziza Zhumadilda | project manager : testing, presentation  |
+| Aidana Meirkhan | product manager : product  |
+| Amira Abdukarimova | analyst: data analysis |
+| Alzhan  Demessinov | Frontend, дизайн |
+| Edige Zholdasbai | developer/programmer: backend |
 
 ## Источники данных
 - Wikidata: https://www.wikidata.org (CC0)

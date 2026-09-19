@@ -6,7 +6,8 @@ AI-сервис, который по названию университета �
 
 - **Сайт:** https://campuslens-qzce.onrender.com (вход не требуется)
 - **Демо-видео:** https://ВСТАВЬТЕ-ССЫЛКУ
-- **Презентация:** `docs/presentation.pdf`
+- **Презентация:** `[LOCUSCASE1.pdf](https://github.com/user-attachments/files/32410456/LOCUSCASE1.pdf)
+`
 - **Техническая справка:** [TECHNICAL.md](TECHNICAL.md)
 
 ## Задача
